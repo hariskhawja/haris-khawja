@@ -1,0 +1,17 @@
+{
+  "name": "haris-khawja",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Haris Khawja's personal portfolio",
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs",
+    "test": "node --test tests/royale.test.cjs tests/leetcode.test.cjs",
+    "check": "node --check app.js && node --check content.js && node --check previews.js && node --check intro.js && node --check server.cjs && node --check royale.cjs && node --check leetcode.cjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.10.0"
+  }
+}

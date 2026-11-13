@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08090A" />
+    <meta
+      name="description"
+      content="Haris Khawja — Waterloo Software Engineering. Software at BMO Capital Markets, Arctic Wolf, and Cache. Systems, web experiences, and ideas in motion."
+    />
+    <title>Haris Khawja — Personal portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="previews.css" />
+    <script src="intro.js"></script>
+    <script src="content.js" defer></script>
+    <script src="previews.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div
+      id="startup-intro"
+      class="startup-intro"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Haris Khawja introduction"
+      tabindex="-1"
+      hidden
+    >
+      <div class="startup-stage" aria-hidden="true">
+        <span class="startup-bloom"></span>
+        <span class="startup-ripple startup-ripple-outer"></span>
+        <span class="startup-ripple startup-ripple-inner"></span>
+        <span class="startup-mark">HK</span>
+      </div>
+      <button class="startup-skip" type="button">Skip intro</button>
+    </div>
+    <a class="skip" href="#work">Skip to content</a>
+    <header class="header shell">
+      <a href="#" class="wordmark" aria-label="Haris Khawja home">HK</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#personal">Off the clock</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <details class="resume-picker header-resumes">
+        <summary>Résumés</summary>
+        <div class="resume-menu" role="group" aria-label="Résumé versions"></div>
+      </details>
+    </header>
+    <main>
+      <section class="hero shell" aria-labelledby="hero-title">
+        <span
+          class="hero-atmosphere"
+          data-preview-motion
+          data-scene="hero"
+          aria-hidden="true"
+        >
+          <span class="hero-light hero-light-platinum"></span>
+          <span class="hero-light hero-light-gold"></span>
+          <svg
+            class="hero-tiles"
+            viewBox="0 0 1200 600"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <rect
+                class="hero-tile"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="400"
+                y="0"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="800"
+                y="0"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="200"
+                y="200"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile hero-tile-gold"
+                x="600"
+                y="200"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="1000"
+                y="200"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile hero-tile-gold"
+                x="0"
+                y="400"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="400"
+                y="400"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+              <rect
+                class="hero-tile"
+                x="800"
+                y="400"
+                width="200"
+                height="200"
+                pathLength="100"
+              />
+            </g>
+          </svg>
+        </span>
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span class="hero-name">Haris Khawja<span class="title-period">.</span></span>
+          </h1>
+          <p class="intro">
+            Software Engineering @
+            <span class="intro-university">University of Waterloo</span>.<br />
+            Currently @ BMO Capital Markets.
+          </p>
+          <div class="hero-actions">
+            <details class="resume-picker hero-resumes">
+              <summary class="resume-button">View résumés</summary>
+              <div class="resume-menu" role="group" aria-label="Résumé versions"></div>
+            </details>
+            <a class="primary-link" href="#work">See the work <span>↓</span></a>
+          </div>
+        </div>
+        <div id="hero-feature" class="hero-feature glass-surface"></div>
+      </section>
+      <section id="work" class="section shell">
+        <div class="section-heading">
+          <div>
+            <h2>The Experiences<span class="subtle-period">.</span></h2>
+          </div>
+        </div>
+        <div id="experience-list"></div>
+      </section>
+      <section id="skills" class="skills-showcase shell" aria-labelledby="skills-title">
+        <div class="skills-heading">
+          <div>
+            <h2 id="skills-title">The Skills.</h2>
+          </div>
+          <button id="skills-pause" class="motion-control" aria-pressed="false">
+            Pause &amp; read skills
+          </button>
+        </div>
+        <div id="skill-lanes" class="skill-lanes"></div>
+      </section>
+      <section id="projects" class="section shell">
+        <div class="section-heading">
+          <div>
+            <h2>The Projects<span class="subtle-period">.</span></h2>
+          </div>
+        </div>
+        <div class="project-toolbar">
+          <div id="project-filters" class="filters" aria-label="Filter projects"></div>
+          <a
+            class="tiny-label"
+            href="https://github.com/hariskhawja"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MORE ON GITHUB ↗</a
+          >
+        </div>
+        <div id="project-grid" class="project-grid"></div>
+        <p id="project-count" class="sr-only" aria-live="polite"></p>
+      </section>
+      <section id="personal" class="section personal-section shell">
+        <div class="section-heading">
+          <div>
+            <h2>The Sides<span class="subtle-period">.</span></h2>
+          </div>
+        </div>
+        <div class="personal-layout">
+          <div id="interest-grid" class="interest-shelf"></div>
+        </div>
+      </section>
+      <section id="contact" class="contact shell">
+        <h2>Get in touch.</h2>
+        <div class="contact-bottom">
+          <div id="contact-links" class="contact-actions"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="shell footer">
+      <a class="wordmark" href="#">HK</a
+      ><span>© <span id="year"></span> Haris Khawja</span><a href="#">Back to top ↑</a>
+    </footer>
+    <dialog id="detail-dialog">
+      <div class="dialog-top">
+        <span id="dialog-eyebrow" class="eyebrow"></span
+        ><button class="close-button" aria-label="Close details">✕</button>
+      </div>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
+</html>
