@@ -96,20 +96,25 @@ window.portfolio = {
       logo: 'assets/bmo.svg',
       role: 'Software Engineer',
       dates: 'SEP 2026 — PRESENT',
-      highlight: 'API fetches: 18s → 300ms',
+      highlight: 'SQL query optimization: 18s → 300ms',
       category: 'Data Cognition · Toronto',
       description:
-        'Building internal software for Global Markets, with a focus on reliable workflows, safe database writes, and faster access to data.',
+        'Building internal software for Global Markets and Investment & Corporate Banking, with a focus on reliable workflows, safe database writes, and faster access to data.',
       projects: [
         {
-          title: 'Procurement, rebuilt for everyday use',
-          text: 'Rebuilt an internal expense procurement application used by more than 2,000 regular users across Global Markets. Added locking to safely handle concurrent database writes.',
-          tags: ['C#', '.NET', 'SQL', 'Concurrency'],
+          title: 'Tech IB Dashboard',
+          text: 'Requested by the COO, performing data analysis on expense vs. revenue data for all 10k+ BMO Capital Market clients to identify weak relationships. Data is sourced from Salesforce, Coupa procurement, and confidential deal statistics.',
+          tags: ['SQL', 'Data'],
+        },
+        {
+          title: 'Smart Expense | Global Markets',
+          text: 'Rebuilt an internal expense procurement application used by more than 2,000 regular users across Global Markets. Improvements include major library upgrades, a modernized frontend app, modularization of server processes, pagination, and locking for safe concurrent database writes.',
+          tags: ['C#', '.NET', 'SQL', 'React', 'TypeScript', 'Concurrency'],
         },
         {
           title: 'From 18 seconds to 300 milliseconds',
-          text: 'Optimized SQL query plans to bring API fetch time down from 18 seconds to 300 milliseconds, making a frequently used workflow more responsive.',
-          tags: ['SQL', 'Query optimization', 'API performance'],
+          text: 'Optimized SQL query plans to reduce API fetch time from 18 seconds to 300 milliseconds, making a frequently used compliance workflow more responsive.',
+          tags: ['SQL', 'SSMS', 'Query optimization', 'API performance'],
         },
       ],
     },
@@ -118,23 +123,23 @@ window.portfolio = {
       logo: 'assets/arctic-wolf.png',
       role: 'Software Developer',
       dates: 'JAN — APR 2026',
-      highlight: 'Test coverage: 16% → 80%',
+      highlight: 'Architecture optimization: 2.7s → 730ms',
       category: 'Cybersecurity · Waterloo',
       description:
         'Worked across backend architecture, application security, and test infrastructure to make services faster and easier to validate.',
       projects: [
         {
-          title: 'Fewer round trips. Faster services.',
-          text: 'Refactored backend architecture to eliminate chatty microservice patterns, reducing latency from 2.7 seconds to 730 milliseconds.',
-          tags: ['Spring Boot', 'RabbitMQ', 'Backend architecture'],
+          title: 'Centralizing function for faster queries',
+          text: 'Refactored backend architecture to eliminate chatty microservice anti-patterns, reducing latency from 2.7 seconds to 730 milliseconds. Migrated hot endpoints to the primary microservice, and outboxed data from pod-specific dbs to a faster centralized db.',
+          tags: ['Spring Boot', 'RabbitMQ', 'Outboxing', 'Architecture'],
         },
         {
-          title: 'Closing the security gaps',
+          title: 'Security of code',
           text: 'Remediated more than 20 high-severity vulnerabilities identified by Snyk, including Billion Laughs, ReDoS, and remote-code-execution issues, ahead of recurring application security audits.',
-          tags: ['Snyk', 'Application security', 'Dependency remediation'],
+          tags: ['Snyk', 'Application Security', 'Dependency Remediation'],
         },
         {
-          title: 'Test infrastructure that holds up',
+          title: 'Custom testing infrastructure',
           text: 'Built a custom test engine for in-memory PDF generation to resolve transpilation conflicts. Reworked the Bazel CI pipeline to enable c8/Istanbul coverage reporting, increasing test coverage from 16% to 80%.',
           tags: ['Bazel', 'Jest', 'Mockito', 'CI / Coverage'],
         },
@@ -146,24 +151,29 @@ window.portfolio = {
       role: 'Full-Stack & Machine Learning Engineer',
       dates: 'MAY — AUG 2025',
       highlight: 'Inventory processing: 15 min → 7 sec',
-      category: 'Resale technology · Toronto',
+      category: 'Resale Technology · Toronto',
       description:
         'Built software for clothing resale: marketplace automation, inventory tools, secure endpoints, and AI-assisted product research.',
       projects: [
         {
-          title: 'Resale workflows on autopilot',
+          title: 'Automated resale workflows from 15 min → 7 sec',
           text: 'Automated crosslisting and marketplace CRUD operations with asynchronous Playwright scripts managed by Django-RQ, increasing resale handling speed by 96%. Built a Django/Bootstrap dashboard that reduced inventory processing from 15 minutes to 7 seconds per item.',
           tags: ['Python', 'Django', 'Playwright', 'Django-RQ'],
         },
         {
           title: 'From clothing photos to valuations',
-          text: 'Built pipelines using Google Gemini OCR and an OpenAI tool-enabled model with dynamic web scraping to extract clothing attributes and calculate resale valuations from live marketplace data.',
-          tags: ['Gemini OCR', 'OpenAI', 'Web scraping', 'GCP'],
+          text: 'Built pipelines using Google Gemini OCR and an OpenAI tool-enabled model to extract clothing attributes and calculate resale valuations from live marketplace data. To optimize tokens, models cache similar clothing data into dbs and predict select marketplaces to scrape based on clothing features.',
+          tags: ['Gemini OCR', 'OpenAI', 'GCP', 'Web scraping', 'AI'],
+        },
+        {
+          title: 'Cache App',
+          text: 'Freshly developed and maintained the frontend app in React-Native, making iterative improvements based on real beta-user feedback.',
+          tags: ['React-Native', 'Redux', 'Expo', 'UI/UX'],
         },
         {
           title: 'Safer public-facing identifiers',
           text: 'Implemented SQIDs to prevent exposure of internal IDs and protect more than 1,000 confidential database records, securing endpoints and supporting TAC compliance.',
-          tags: ['SQIDs', 'API security', 'Django'],
+          tags: ['SQIDs', 'Django', 'API Security'],
         },
       ],
     },
