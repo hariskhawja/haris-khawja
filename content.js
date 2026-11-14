@@ -434,7 +434,7 @@ window.portfolio = {
     team: '2055A · Capybaras',
     season: '2023–2024',
     description:
-      'VEX Robotics with the Capybaras. The codebase includes odometry, PID control, autonomous routines, and a coordinate-based route planning workflow.',
+      'VEX Robotics with Capybaras. The codebase includes odometry, PID control, autonomous routines, and a coordinate-based route planning workflow.',
     github: 'https://github.com/hariskhawja/2055A',
     website: 'https://mi3lschool.org/history2055A',
     programmingSite: 'https://capybaras-2055.vercel.app/',

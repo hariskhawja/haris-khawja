@@ -42,8 +42,7 @@
       event.preventDefault();
       finish();
     } else if (event.key === 'Tab') {
-      event.preventDefault();
-      overlay.querySelector('button').focus({ preventScroll: true });
+      finish();
     }
   }
 
@@ -80,7 +79,6 @@
         element.inert = true;
       });
       overlay.hidden = false;
-      overlay.querySelector('button').addEventListener('click', finish);
       document.addEventListener('keydown', handleKey, true);
       document.body.classList.add('intro-active');
       window.projectPreviews?.sync();

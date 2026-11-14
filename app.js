@@ -589,8 +589,8 @@ function renderVexWidget() {
     <p class="tiny-label">${escapeHtml(vex.role)} · ${escapeHtml(vex.season)}</p>
     <p class="dialog-description">${escapeHtml(vex.description)}</p>
     <div class="project-links">${renderExternalLink(vex.github, '2055A codebase')}${renderExternalLink(vex.programmingSite, 'Programming website')}${renderExternalLink(vex.website, 'Team award history')}</div>
-    <section class="project-detail-section"><h3>Selected team awards</h3>
-      <p>Team awards from my 2023–2024 seasons, as recorded by Mi3L School.</p>
+    <section class="project-detail-section"><h3>Team awards</h3>
+      <p>Team awards from the 2023–2024 season, as recorded by Mi3L School.</p>
       <ul class="award-list">${awards.map((item) => `<li><span>${escapeHtml(item.year)}</span><div><strong>${escapeHtml(item.award)}</strong><p>${escapeHtml(item.event)}</p></div></li>`).join('')}</ul>
     </section>
   `;

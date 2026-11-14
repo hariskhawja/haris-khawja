@@ -2416,25 +2416,6 @@ html.intro-pending {
   inset: 12%;
   border: 1px solid #f2f0ec88;
 }
-.startup-skip {
-  position: absolute;
-  right: max(28px, env(safe-area-inset-right));
-  bottom: max(32px, env(safe-area-inset-bottom));
-  min-height: 44px;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  color: var(--secondary);
-  font-size: 12px;
-  transition:
-    color 150ms,
-    border-color 150ms;
-}
-.startup-skip:hover,
-.startup-skip:focus-visible {
-  color: var(--text);
-  border-color: #f2f0ec44;
-}
 .intro-running .startup-intro {
   animation: startup-clear 1950ms linear both;
 }
