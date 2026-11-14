@@ -757,7 +757,10 @@ function setupResumeLinks() {
   });
   document.addEventListener('click', (event) => {
     pickers.forEach((picker) => {
-      if (!picker.contains(event.target) || event.target.closest('[data-resume]'))
+      if (
+        !picker.contains(event.target) ||
+        event.target.closest('[data-resume], [data-nav]')
+      )
         picker.open = false;
     });
   });
