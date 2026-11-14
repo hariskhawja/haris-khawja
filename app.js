@@ -146,7 +146,7 @@ function renderProjectCard(project) {
       </div>
       <div class="project-body">
         <div class="project-meta">
-          <span>${escapeHtml(project.category)}</span>
+          <span>${escapeHtml(project.types.join(' / '))}</span>
           ${renderProjectStatus(project)}
         </div>
         <h3 id="project-title-${escapeHtml(project.id)}">${escapeHtml(project.title)}</h3>
@@ -172,7 +172,7 @@ function renderProjectCard(project) {
 
 function renderProjects(animateChange = false) {
   const visibleProjects = portfolio.projects.filter(
-    (project) => selectedFilter === 'All' || project.category === selectedFilter,
+    (project) => selectedFilter === 'All' || project.types.includes(selectedFilter),
   );
 
   select('#project-grid').innerHTML = visibleProjects.map(renderProjectCard).join('');
@@ -197,10 +197,7 @@ function renderProjects(animateChange = false) {
 }
 
 function setupProjectFilters() {
-  const categories = [
-    'All',
-    ...new Set(portfolio.projects.map((project) => project.category)),
-  ];
+  const categories = ['All', ...portfolio.projectTypes];
 
   select('#project-filters').innerHTML = categories
     .map(
@@ -284,7 +281,7 @@ function setupProjectDetails() {
     `;
 
     openDialog(
-      `${project.category} / ${project.real ? 'BUILT PROJECT' : 'ILLUSTRATIVE CONCEPT'}`,
+      `${project.types.join(' / ')} / ${project.real ? 'BUILT PROJECT' : 'ILLUSTRATIVE CONCEPT'}`,
       content,
       button,
     );
@@ -575,14 +572,16 @@ async function openLeetCode(button) {
 
 function renderVexWidget() {
   const vex = portfolio.vex;
+  const awards = [...vex.awards].sort((a, b) => Number(b.year) - Number(a.year));
   return `
     <img class="widget-team-logo" src="assets/capybaras.png" alt="2055A Capybaras logo" width="100" height="100">
     <h2 id="dialog-title">${escapeHtml(vex.team)}</h2>
+    <p class="tiny-label">${escapeHtml(vex.role)} · ${escapeHtml(vex.season)}</p>
     <p class="dialog-description">${escapeHtml(vex.description)}</p>
     <div class="project-links">${renderExternalLink(vex.github, '2055A codebase')}${renderExternalLink(vex.programmingSite, 'Programming website')}${renderExternalLink(vex.website, 'Team award history')}</div>
     <section class="project-detail-section"><h3>Selected team awards</h3>
       <p>Team awards from my 2023–2024 seasons, as recorded by Mi3L School.</p>
-      <ul class="award-list">${vex.awards.map((item) => `<li><span>${escapeHtml(item.year)}</span><div><strong>${escapeHtml(item.award)}</strong><p>${escapeHtml(item.event)}</p></div></li>`).join('')}</ul>
+      <ul class="award-list">${awards.map((item) => `<li><span>${escapeHtml(item.year)}</span><div><strong>${escapeHtml(item.award)}</strong><p>${escapeHtml(item.event)}</p></div></li>`).join('')}</ul>
     </section>
   `;
 }

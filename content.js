@@ -179,7 +179,9 @@ window.portfolio = {
     },
   ],
 
-  // Personal projects. id must be unique; category creates a filter automatically.
+  // Projects can belong to multiple types. Use names from projectTypes below.
+  projectTypes: ['Systems', 'Full-Stack', 'AI/ML', 'Data', 'Embedded', 'Finance', 'Web'],
+  // Personal projects. id must be unique; types controls labels and filtering.
   // art selects a decorative preview, not a screenshot of the project.
   // description is the card summary; details is the full story in the dialog.
   // github and live accept full https:// links; leave unused values empty.
@@ -187,27 +189,36 @@ window.portfolio = {
     {
       id: 'quectomm',
       title: 'QuectoMM',
-      category: 'Systems',
+      types: ['Systems', 'Data', 'Finance'],
       number: '01',
       art: 'market',
       label: 'MARKET MICROSTRUCTURE / IN PROGRESS',
       status: 'In progress',
-      description: 'A C++20 engine for replaying markets, order by order.',
-      tags: ['C++20', 'Python', 'Pandas', 'CMake', 'Market microstructure'],
+      description:
+        'A C++20 engine for replaying micromarket data, studying marginal impacts of signals under an Avellaneda-Stoikov strategy.',
+      tags: [
+        'C++20',
+        'Python',
+        'Pandas',
+        'CMake',
+        'Market Microstructure',
+        'Research',
+        'Finance',
+      ],
       details:
         'A discrete-event market-making research engine that reconstructs a Level-3 order book from LOBSTER events.',
       sections: [
         {
-          title: 'How it works',
-          text: 'A Genesis-volume model accounts for liquidity whose individual orders are unobserved, while preserving FIFO priority for observed orders.',
+          title: 'Engineering',
+          text: 'Since LOBSTER datasets cap at top 10 price levels, some order data is untrackable during replay. As a solution, the order book utilizes a Genesis-volume model to account and pessimistically estimate for liquidity whose individual orders are unobserved, while preserving FIFO priority for observed orders.',
         },
         {
           title: 'Validation',
-          text: 'Replayed approximately 2.1 million events across five NASDAQ tickers from one sample trading day. Before each event’s snapshot reconciliation, best bid/ask agreement is at least 99.94% and depth error is at most 0.29%.',
+          text: 'Replayed approximately 2.1 million events across five NASDAQ (AAPL, AMZN, GOOG, INTC, MSFT) tickers from one sample trading day. Before each event’s snapshot reconciliation, best bid/ask agreement is at least 99.94% and depth error is at most 0.29%.',
         },
         {
-          title: 'Next',
-          text: 'Studying the marginal impact of microstructure signals on an Avellaneda–Stoikov strategy. This research is still in progress.',
+          title: 'In progress',
+          text: 'Studying the marginal impact of microstructure signals on an Avellaneda-Stoikov strategy. This research is still in progress.',
         },
       ],
       github: 'https://github.com/hariskhawja/QuectoMM',
@@ -217,22 +228,22 @@ window.portfolio = {
     {
       id: 'letscook',
       title: 'LetsCook',
-      category: 'Web',
+      types: ['Full-Stack'],
       number: '02',
       art: 'cooking',
       label: 'RECIPES / CHALLENGES / COMMUNITY',
-      description: 'Recipe challenges, shared creations, and a little competition.',
+      description: 'Recipe challenges, shared creations, and competition.',
       tags: ['Next.js', 'React', 'TypeScript', 'Express', 'PostgreSQL', 'Supabase'],
       details:
-        'A full-stack cooking community with recipe publishing, photo submissions, creator reviews, and a points-based leaderboard.',
+        'A full-stack platform to motivate the learning to cook, especially those living on campus. A cooking community with recipe publishing, photo submissions, creator reviews, and a points-based leaderboard.',
       sections: [
         {
           title: 'The build',
           text: 'Next.js/React interface and Express REST APIs, with Supabase authentication, PostgreSQL, and row-level security. Deployed on Vercel and Google Cloud Run.',
         },
         {
-          title: 'During the project',
-          text: 'More than 30 active users and 200 weekly site visits. These are historical figures from the project period, not live activity.',
+          title: 'Peak analytics',
+          text: 'More than 30 active users and 200 weekly site visits.',
         },
       ],
       github: 'https://github.com/hariskhawja/LetsCook',
@@ -242,19 +253,19 @@ window.portfolio = {
     {
       id: 'emotionsense',
       title: 'EmotionSense.AI',
-      category: 'AI & Data',
+      types: ['AI/ML', 'Data'],
       number: '03',
       art: 'emotions',
       label: 'TEXT → EMOTIONAL PATTERNS',
       status: 'Most Creative · HackSwift 2024',
-      description: 'Turning text into a picture of the emotions behind it.',
-      tags: ['React', 'Chart.js', 'Python', 'Flask', 'NLTK'],
+      description: 'Translating text messages into emotions.',
+      tags: ['React', 'Chart.js', 'Python', 'Flask', 'NLTK', 'Naive-Bayes'],
       details:
         'A HackSwift 2024 team project for analyzing emotions in uploaded text and visualizing emotional trends. Awarded Most Creative Project.',
       sections: [
         {
           title: 'The build',
-          text: 'A React interface with Chart.js visualizations, backed by Python, Flask, and NLTK for text analysis.',
+          text: 'A React interface with Chart.js visualizations, backed by Python, Flask, and NLTK for text analysis. Trained a Naive-Bayes model for semantic analysis.',
         },
         { title: 'Team', text: 'Built with Edison Ying and Roy Zhang.' },
       ],
@@ -265,27 +276,23 @@ window.portfolio = {
     {
       id: 'runevault',
       title: 'RuneVault',
-      category: 'Coursework',
+      types: ['Systems'],
       number: '04',
       art: 'runes',
       label: 'CS247 / COURSE PROJECT',
       status: 'CS247',
       description: 'Five vault levels. Four Arcanist classes. A C++14 dungeon crawler.',
-      tags: ['C++14', 'RAII', 'Design patterns', 'MVC', 'CS247'],
+      tags: ['C++14', 'RAII', 'Design Patterns', 'MVC'],
       details:
         'A terminal dungeon crawler built with the C++14 standard library for CS247. Choose a Sage, Hexblade, Warden, or Voidwalker, collect Rune Fragments, and recover each floor’s Cipher Gem to reveal the way down.',
       sections: [
         {
           title: 'Object-oriented design',
-          text: 'Class abilities use Strategy, temporary scroll effects form a Decorator chain, and combat uses Visitor dispatch. Factories construct characters and enemies, guarded items use State, and a shared notification log records turn events.',
+          text: 'Class abilities use Strategy, temporary scroll effects form a Decorator chain, and combat uses Visitor dispatch. Factories construct characters and enemies, guarded items use State, and a shared notification log (Singleton) records turn events.',
         },
         {
           title: 'Ownership and game structure',
           text: 'Game, Model, and View separate commands, rules, and terminal rendering. Levels own items and enemies with unique_ptr; shared character lifetimes support temporary decorator effects. Layout files and explicit random seeds make sessions reproducible.',
-        },
-        {
-          title: 'Current validation',
-          text: 'GitHub Actions builds the game and checks scripted startup, bonus mode, and demo-layout loading. The current checkout has no test sources, so make test is not a passing regression suite. Enemy damage modifiers and placement on cramped custom maps remain areas for further work.',
         },
       ],
       resources: [
@@ -301,20 +308,20 @@ window.portfolio = {
     {
       id: 'not-a-smartboard',
       title: 'Not a Smartboard',
-      category: 'Coursework',
+      types: ['AI/ML', 'Embedded'],
       number: '05',
       art: 'whiteboard',
       label: 'CODE REVIEW / BEYOND THE SCREEN',
       status: 'SE101',
       description:
-        'Code reviews on a whiteboard, with handwritten feedback captured digitally.',
+        'The smart board alternative. Code reviews on a whiteboard, with handwritten feedback captured digitally.',
       tags: ['Python', 'Flask', 'OpenCV', 'Raspberry Pi', 'Google Cloud Vision'],
       details:
         'An SE101 team project that projects source code onto a whiteboard and captures handwritten review comments, making group code review more interactive than screen sharing.',
       sections: [
         {
           title: 'From physical to digital',
-          text: 'A Raspberry Pi, USB webcam, and monitor or projector connect a physical review space to a Python/Flask application, with OpenCV and Google Cloud Vision in the software stack.',
+          text: 'A Raspberry Pi, USB webcam, and monitor or projector connect a physical review space to a Python/Flask application, with OpenCV and Google Cloud Vision in the software stack. This proof of concept proves an affordable and portable alternative exists to existing smart boards.',
         },
         {
           title: 'Team',
@@ -322,20 +329,18 @@ window.portfolio = {
         },
       ],
       github: 'https://github.com/hariskhawja/Not-a-Smartboard',
-      demo: 'https://drive.google.com/file/d/1h-a4Zw946FFNwTKIcn3T0HXxlNzyXM1y/view',
       live: '',
       real: true,
     },
     {
-      id: 'personal-space',
-      title: 'A space on the internet',
-      category: 'Web',
+      id: 'personal-portfolio',
+      title: 'HK',
+      types: ['Web'],
       number: '06',
       art: 'web',
       label: 'YOU ARE HERE',
-      description:
-        'The portfolio you’re exploring. A home for work, experiments, and a little personality.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'UI / UX'],
+      description: 'The portfolio you’re exploring.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
       details:
         'An interactive personal website with expandable work experience, filterable projects, a living toolkit, and personal-interest widgets. Built with native browser features, responsive layouts, accessible dialogs, and reduced-motion support. Content and behavior are separated to keep the site easy to update.',
       github: 'https://github.com/hariskhawja/haris-khawja',
@@ -409,6 +414,7 @@ window.portfolio = {
     },
   },
   vex: {
+    role: 'Programmer & Robot Driver',
     team: '2055A · Capybaras',
     season: '2023–2024',
     description:

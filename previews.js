@@ -202,7 +202,13 @@
     </div>`,
     whiteboard: smartboardScene,
     web: () =>
-      `<div class="portfolio-preview"><span>HK</span><strong>Software<br>&amp; systems.</strong><small>haris / personal space</small></div>`,
+      `<div class="portfolio-preview" data-preview-motion data-scene="portfolio">
+        <span class="portfolio-stage">
+          <span class="portfolio-ripple portfolio-ripple-outer"></span>
+          <span class="portfolio-ripple portfolio-ripple-inner"></span>
+          <span class="portfolio-monogram">HK</span>
+        </span>
+      </div>`,
   };
 
   function update() {

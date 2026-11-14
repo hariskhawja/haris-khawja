@@ -369,25 +369,54 @@ dialog {
 /* Other project displays are illustrative, based on the verified functionality. */
 .portfolio-preview {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 25px;
-  background: linear-gradient(140deg, #17191c, #17191c);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--bg);
 }
-.portfolio-preview > span {
-  font: 700 17px var(--display);
-  letter-spacing: -0.03em;
+.portfolio-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 140px;
 }
-.portfolio-preview strong {
-  font: 500 35px/1.2 var(--display);
-  letter-spacing: -0.03em;
-  margin-top: 25px;
+.portfolio-monogram {
+  position: relative;
+  color: var(--text);
+  font: 800 64px / 1 var(--display);
+  letter-spacing: -0.04em;
 }
-.portfolio-preview small {
-  margin-top: auto;
-  font-size: 10px;
-  color: #92969d;
+.portfolio-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation: portfolio-ripple 4.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation-play-state: paused;
+}
+.portfolio-ripple-outer {
+  border: 2px solid #c7ab7899;
+}
+.portfolio-ripple-inner {
+  inset: 12%;
+  border: 1px solid #f2f0ec88;
+  animation-delay: 140ms;
+}
+@keyframes portfolio-ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0.28);
+  }
+  4% {
+    opacity: 0.8;
+  }
+  30%,
+  100% {
+    opacity: 0;
+    transform: scale(3.2);
+  }
 }
 
 /* Personal interests share a shelf of recognizable objects. */
