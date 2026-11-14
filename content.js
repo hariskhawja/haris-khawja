@@ -103,7 +103,7 @@ window.portfolio = {
       projects: [
         {
           title: 'Tech IB Dashboard',
-          text: 'Requested by the COO, performing data analysis on expense vs. revenue data for all 10k+ BMO Capital Market clients to identify weak relationships. Data is sourced from Salesforce, Coupa procurement, and confidential deal statistics.',
+          text: 'Analyzing expense and revenue data at the COO’s request for all 10k+ BMO Capital Markets clients to identify weak relationships. Data is sourced from Salesforce, Coupa procurement, and confidential deal statistics.',
           tags: ['SQL', 'Data'],
         },
         {
@@ -129,8 +129,8 @@ window.portfolio = {
         'Worked across backend architecture, application security, and test infrastructure to make services faster and easier to validate.',
       projects: [
         {
-          title: 'Centralizing function for faster queries',
-          text: 'Refactored backend architecture to eliminate chatty microservice anti-patterns, reducing latency from 2.7 seconds to 730 milliseconds. Migrated hot endpoints to the primary microservice, and outboxed data from pod-specific dbs to a faster centralized db.',
+          title: 'Centralizing services for faster queries',
+          text: 'Refactored backend architecture to eliminate chatty microservice anti-patterns, reducing latency from 2.7 seconds to 730 milliseconds. Migrated hot endpoints to the primary microservice and outboxed data from pod-specific databases to a faster centralized database.',
           tags: ['Spring Boot', 'RabbitMQ', 'Outboxing', 'Architecture'],
         },
         {
@@ -162,13 +162,13 @@ window.portfolio = {
         },
         {
           title: 'From clothing photos to valuations',
-          text: 'Built pipelines using Google Gemini OCR and an OpenAI tool-enabled model to extract clothing attributes and calculate resale valuations from live marketplace data. To optimize tokens, models cache similar clothing data into dbs and predict select marketplaces to scrape based on clothing features.',
+          text: 'Built pipelines using Google Gemini OCR and an OpenAI tool-enabled model to extract clothing attributes and calculate resale valuations from live marketplace data. To reduce token usage, models cache similar clothing data in databases and select marketplaces to scrape.',
           tags: ['Gemini OCR', 'OpenAI', 'GCP', 'Web scraping', 'AI'],
         },
         {
           title: 'Cache App',
-          text: 'Freshly developed and maintained the frontend app in React-Native, making iterative improvements based on real beta-user feedback.',
-          tags: ['React-Native', 'Redux', 'Expo', 'UI/UX'],
+          text: 'Developed and maintained the frontend app using React-Native, making iterative improvements based on real beta-user feedback.',
+          tags: ['React Native', 'Redux', 'Expo', 'UI/UX'],
         },
         {
           title: 'Safer public-facing identifiers',
@@ -195,7 +195,7 @@ window.portfolio = {
       label: 'MARKET MICROSTRUCTURE / IN PROGRESS',
       status: 'In progress',
       description:
-        'A C++20 engine for replaying micromarket data, studying marginal impacts of signals under an Avellaneda-Stoikov strategy.',
+        'A C++20 engine for replaying market microstructure data, studying marginal impacts of signals under an Avellaneda-Stoikov strategy.',
       tags: [
         'C++20',
         'Python',
@@ -210,7 +210,7 @@ window.portfolio = {
       sections: [
         {
           title: 'Engineering',
-          text: 'Since LOBSTER datasets cap at top 10 price levels, some order data is untrackable during replay. As a solution, the order book utilizes a Genesis-volume model to account and pessimistically estimate for liquidity whose individual orders are unobserved, while preserving FIFO priority for observed orders.',
+          text: 'Since LOBSTER datasets are limited to the top 10 price levels, some order data is untrackable during replay. As a solution, the order book utilizes a Genesis-volume model to account for and conservatively estimate liquidity whose individual orders are unobserved, while preserving FIFO priority for observed orders.',
         },
         {
           title: 'Validation',
@@ -235,7 +235,7 @@ window.portfolio = {
       description: 'Recipe challenges, shared creations, and competition.',
       tags: ['Next.js', 'React', 'TypeScript', 'Express', 'PostgreSQL', 'Supabase'],
       details:
-        'A full-stack platform to motivate the learning to cook, especially those living on campus. A cooking community with recipe publishing, photo submissions, creator reviews, and a points-based leaderboard.',
+        'A full-stack platform to encourage people to learn to cook, especially students living on campus. A cooking community with recipe publishing, photo submissions, creator reviews, and a points-based leaderboard.',
       sections: [
         {
           title: 'The build',
@@ -259,13 +259,13 @@ window.portfolio = {
       label: 'TEXT → EMOTIONAL PATTERNS',
       status: 'Most Creative · HackSwift 2024',
       description: 'Translating text messages into emotions.',
-      tags: ['React', 'Chart.js', 'Python', 'Flask', 'NLTK', 'Naive-Bayes'],
+      tags: ['React', 'Chart.js', 'Python', 'Flask', 'NLTK', 'Naive Bayes'],
       details:
         'A HackSwift 2024 team project for analyzing emotions in uploaded text and visualizing emotional trends. Awarded Most Creative Project.',
       sections: [
         {
           title: 'The build',
-          text: 'A React interface with Chart.js visualizations, backed by Python, Flask, and NLTK for text analysis. Trained a Naive-Bayes model for semantic analysis.',
+          text: 'A React interface with Chart.js visualizations, backed by Python, Flask, and NLTK for text analysis. Trained a naive Bayes model for semantic analysis.',
         },
         { title: 'Team', text: 'Built with Edison Ying and Roy Zhang.' },
       ],
@@ -321,7 +321,7 @@ window.portfolio = {
       sections: [
         {
           title: 'From physical to digital',
-          text: 'A Raspberry Pi, USB webcam, and monitor or projector connect a physical review space to a Python/Flask application, with OpenCV and Google Cloud Vision in the software stack. This proof of concept proves an affordable and portable alternative exists to existing smart boards.',
+          text: 'A Raspberry Pi, USB webcam, and monitor or projector connect a physical review space to a Python/Flask application, with OpenCV and Google Cloud Vision in the software stack. This proof of concept demonstrates an affordable, portable alternative to existing smart boards.',
         },
         {
           title: 'Team',

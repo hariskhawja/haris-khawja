@@ -182,7 +182,8 @@ function renderProjects(animateChange = false) {
   );
 
   select('#project-grid').innerHTML = visibleProjects.map(renderProjectCard).join('');
-  select('#project-count').textContent = `${visibleProjects.length} projects shown`;
+  select('#project-count').textContent =
+    `${visibleProjects.length} ${visibleProjects.length === 1 ? 'project' : 'projects'} shown`;
   window.projectPreviews.refresh();
   if (animateChange && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     selectAll('#project-grid > .project-card').forEach((card, index) => {
