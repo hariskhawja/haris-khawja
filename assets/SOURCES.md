@@ -35,6 +35,14 @@ The Capybaras trophy cabinet, floor, and cubic four-wheel arm robot are code-nat
 
 The science award's exact title, issuer, research group, and September 2023 date come from Haris's public LinkedIn honors section, <https://ca.linkedin.com/in/hariskhawja>. It lists the University of Toronto Scarborough and the Andre Simpson Research Group; no research topic, publication, or award amount is inferred. Mario Kart and Red Bull Racing are currently commented out in the interest list; their assets remain available for restoration.
 
-Haris supplied the AP Capstone Diploma and AP Research paper topic, ethical AI, on November 12, 2026. Direct credential and paper links are pending. Research is the grouping label; the university recognition retains its official Science Award title inside the widget.
+Haris supplied the AP Capstone Diploma and AP Research paper topic, ethical AI, on November 12, 2026. The original credential and paper PDFs were supplied on November 14, 2026 and are linked below. Research is the grouping label; the university recognition retains its official Science Award title inside the widget.
 
 `hk-icon-16.png`, `hk-icon-32.png`, and `hk-icon-180.png` are favicon and Apple touch icon sizes derived from Haris's supplied `C:/Users/haris/Downloads/HK.png`. Extra black space was cropped and the original HK artwork preserved.
+
+Research documents supplied by Haris on November 14, 2026:
+
+- `ap-research-ethical-ai.pdf`: original AP Research paper, _Regulating the Accuracy Bias and Safety of Artificial Intelligence_, dated April 29, 2024.
+- `ap-awards.pdf`: original Awards.pdf. Page 1: AP Capstone Diploma (July 3, 2024); page 2: AP International Diploma (July 3, 2024); page 3: AP Scholar with Distinction Award (July 3, 2024); page 4: AP Scholar Award (July 3, 2023).
+- `uoft-research-award.pdf`: original OHSS.pdf, a scanned 2023 Outstanding High School Student - Science Award from the University of Toronto Scarborough.
+
+All three PDFs are unmodified copies. Football experience (13+ years) and position (right/left winger) were supplied directly by Haris.

@@ -18,6 +18,9 @@ const allowed = new Set([
   'intro.js',
   'assets/haris-khawja-resume-swe.pdf',
   'assets/haris-khawja-resume-quant.pdf',
+  'assets/ap-awards.pdf',
+  'assets/ap-research-ethical-ai.pdf',
+  'assets/uoft-research-award.pdf',
 ]);
 const handleRoyale = createRoyaleHandler();
 const handleLeetCode = createLeetCodeHandler();

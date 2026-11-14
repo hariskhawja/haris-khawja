@@ -355,6 +355,8 @@ window.portfolio = {
   zetamac: { highScore: 83, url: 'https://arithmetic.zetamac.com/' },
   // First club is the front card; the next two fan out behind it.
   football: {
+    experience: '13+ years',
+    position: 'Right / left winger',
     clubs: [
       {
         id: 'erin-mills',
@@ -394,7 +396,7 @@ window.portfolio = {
     },
   },
   // Research groups the university recognition and AP qualification together.
-  // Add the diploma and paper links when available; empty links stay hidden.
+  // Supplied documents are copied into assets; #page opens a specific certificate.
   research: {
     universityAward: {
       title: 'Outstanding High School Student - Science Award',
@@ -404,13 +406,27 @@ window.portfolio = {
       year: '2023',
       logo: 'assets/uoft-scarborough.svg',
       crest: 'assets/uoft-crest.svg',
-      source: 'https://ca.linkedin.com/in/hariskhawja',
+      source: 'assets/uoft-research-award.pdf',
     },
     capstone: {
       title: 'AP Capstone Diploma',
       paperTopic: 'Ethical AI',
-      diplomaUrl: '',
-      paperUrl: '',
+      diplomaUrl: 'assets/ap-awards.pdf#page=1',
+      paperUrl: 'assets/ap-research-ethical-ai.pdf',
+      paperTitle: 'Regulating the Accuracy Bias and Safety of Artificial Intelligence',
+      awards: [
+        {
+          title: 'AP International Diploma',
+          year: '2024',
+          url: 'assets/ap-awards.pdf#page=2',
+        },
+        {
+          title: 'AP Scholar with Distinction Award',
+          year: '2024',
+          url: 'assets/ap-awards.pdf#page=3',
+        },
+        { title: 'AP Scholar Award', year: '2023', url: 'assets/ap-awards.pdf#page=4' },
+      ],
     },
   },
   vex: {

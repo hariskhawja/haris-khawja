@@ -60,6 +60,12 @@ function renderExternalLink(value, label) {
   `;
 }
 
+// Supplied documents are local assets, with optional PDF page destinations.
+function renderDocumentLink(path, label) {
+  if (!/^assets\/[a-z0-9-]+\.pdf(?:#page=[1-9][0-9]*)?$/.test(path || '')) return '';
+  return `<a class="primary-link" href="${escapeHtml(path)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} <span class="file-type">PDF</span></a>`;
+}
+
 // 01. Work experience — each role expands to its own projects.
 function renderWorkProject(project) {
   return /* HTML */ `
@@ -352,7 +358,7 @@ function renderFootballHand() {
 function renderFootballWidget() {
   return `
     <h2 id="dialog-title">Football</h2>
-    <p class="dialog-description">Erin Mills, Real Madrid &amp; Manchester United.</p>
+    <p class="dialog-description">${escapeHtml(portfolio.football.experience)} playing football · ${escapeHtml(portfolio.football.position)}.</p>
     <ul class="football-clubs">${portfolio.football.clubs
       .map(
         (club) => `
@@ -393,12 +399,15 @@ function renderResearchWidget() {
       <img class="research-university-logo" src="${escapeHtml(award.logo)}" alt="${escapeHtml(award.institution)}" width="185" height="81">
       <h3>${escapeHtml(award.title)}</h3>
       <p>${escapeHtml(award.group)}<br>${escapeHtml(award.institution)} · ${escapeHtml(award.date)}</p>
-      <div class="project-links">${renderExternalLink(award.source, 'View award')}</div>
+      <div class="project-links">${renderDocumentLink(award.source, 'View award')}</div>
     </section>
     <section class="research-entry">
       <h3>${escapeHtml(capstone.title)}</h3>
       <p>AP Research paper · ${escapeHtml(capstone.paperTopic)}</p>
-      <div class="project-links">${renderExternalLink(capstone.diplomaUrl, 'View diploma')}${renderExternalLink(capstone.paperUrl, 'Read research paper')}</div>
+      <p>${escapeHtml(capstone.paperTitle)}</p>
+      <div class="project-links">${renderDocumentLink(capstone.diplomaUrl, 'View diploma')}${renderDocumentLink(capstone.paperUrl, 'Read research paper')}</div>
+      <h4>Additional AP awards</h4>
+      <ul class="award-list">${capstone.awards.map((item) => `<li><span>${escapeHtml(item.year)}</span><div>${renderDocumentLink(item.url, item.title)}</div></li>`).join('')}</ul>
     </section>`;
 }
 
@@ -428,7 +437,7 @@ function renderInterests() {
     {
       id: 'football',
       title: 'Football',
-      subtitle: 'Erin Mills · Madrid · United',
+      subtitle: `${portfolio.football.experience} · ${portfolio.football.position}`,
       art: renderFootballHand(),
     },
     {
