@@ -50,12 +50,12 @@ function renderExternalLink(value, label) {
 
   return /* HTML */ `
     <a
-      class="primary-link"
+      class="primary-link external-link"
       href="${escapeHtml(url)}"
       target="_blank"
       rel="noopener noreferrer"
     >
-      ${escapeHtml(label)} ↗
+      ${escapeHtml(label)} ${arrowIcon()}
     </a>
   `;
 }

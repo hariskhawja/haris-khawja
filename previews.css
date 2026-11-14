@@ -2696,3 +2696,26 @@ html.intro-pending {
   line-height: 1.8;
   overflow-wrap: anywhere;
 }
+
+/* Draw link arrows as geometry so system emoji fonts never affect them. */
+.external-link {
+  gap: 6px;
+}
+.external-link .icon {
+  width: 14px;
+  height: 14px;
+}
+.hero .primary-link .icon {
+  color: var(--accent);
+}
+.project-toolbar > .tiny-label,
+.footer > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.project-toolbar > .tiny-label .icon,
+.footer > a:last-child .icon {
+  width: 14px;
+  height: 14px;
+}
