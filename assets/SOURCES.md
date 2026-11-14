@@ -25,7 +25,7 @@ VEX awards: <https://mi3lschool.org/history2055A>, filtered to the confirmed 202
 - `mario-standard-kart.png`: Mario's Standard Kart M model render hosted by Super Mario Wiki, <https://mario.wiki.gallery/images/d/db/Standard_Kart_M_%28Mario%29_Model.png>, documented at <https://www.mariowiki.com/Standard_Kart>. The original M badge is preserved.
 - `red-bull-racing.svg`: official Oracle Red Bull Racing logo from <https://www.redbullracing.com/_next/static/media/ORBR_logo_2026.4059dac5.svg>.
 - `red-bull-car.webp`: transparent side-view car artwork from the official Formula 1 team page, <https://www.formula1.com/en/teams/red-bull-racing>, using its image service at <https://media.formula1.com/image/upload/c_fit,w_800/q_auto/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp>.
-- `haris-khawja-resume-swe.pdf` and `haris-khawja-resume-quant.pdf`: unchanged copies of the two résumés supplied by Haris, added for the requested viewer links.
+- `haris-khawja-resume-swe.pdf` and `haris-khawja-resume-quant.pdf`: exact copies of Haris's updated `Haris_Khawja_Resume_SWE.pdf` and `Haris_Khawja_Resume_DATQ.pdf` from the Career folder, replaced on November 14, 2026. SWE maps to Software engineering; DATQ maps to Data & quant.
 
 EmotionSense.AI now embeds <https://emotion-sense-ai.vercel.app/>. RuneVault's dungeon map is illustrative rather than a captured game session. Not a Smartboard's preview is an animated CSS 3D hardware model of a projector and whiteboard, with a Raspberry Pi connected to a laptop on a table. It illustrates the documented setup rather than claiming to be a project photo. A link to the recorded demo remains available in its project details.
 

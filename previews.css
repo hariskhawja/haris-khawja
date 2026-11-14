@@ -2719,3 +2719,37 @@ html.intro-pending {
   width: 14px;
   height: 14px;
 }
+
+/* Give phone navigation its own row instead of compressing it beside HK. */
+@media (max-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    height: auto;
+    gap: 8px 20px;
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: 8px;
+  }
+  .header > .wordmark {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .header .header-resumes {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .header nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 12px;
+  }
+  .header nav a {
+    white-space: nowrap;
+  }
+}

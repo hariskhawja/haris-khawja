@@ -614,7 +614,7 @@ function setupInterests() {
         'OFF THE CLOCK / MENTAL MATH',
         `
         <h2 id="dialog-title">Zetamac</h2>
-        <p class="dialog-description">Fast arithmetic. One more round.</p>
+        <p class="dialog-description">Fast arithmetic.</p>
         <div class="zetamac-score"><span>Personal best</span><strong>${portfolio.zetamac.highScore}</strong></div>
         ${renderExternalLink(portfolio.zetamac.url, 'Play Zetamac')}
       `,
